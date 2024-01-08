@@ -17,3 +17,6 @@ kubectl delete all --all \
 kubectl edit deployment myapp-deployment --record \
 kubectl set image deployment myapp-deployment nginx:1.18 --record \
 kubectl get services \
+kubectl get configmaps \
+kubectl get secrets \
+kubectl describe secrets app-secret \
