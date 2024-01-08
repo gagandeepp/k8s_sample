@@ -7,4 +7,13 @@ kubectl replace -f rs-definition.yaml \
 kubectl scale --replicas=6 -f rs-definition.yaml \
 kubectl delete replicaset myapp-replicaset \
 kubectl get all \
-kubectl describe deployment myapp-deployment
+kubectl create -f deployment myapp-deployment \
+kubectl get deployments \
+kubectl describe deployment myapp-deployment \
+kubectl rollout status deployment/myapp-deployment \
+kubectl rollout history deployment/myapp-deployment \
+kubectl rollout undo deployment/myapp-deployment \
+kubectl delete all --all \
+kubectl edit deployment myapp-deployment --record \
+kubectl set image deployment myapp-deployment nginx:1.18 --record \
+kubectl get services \
