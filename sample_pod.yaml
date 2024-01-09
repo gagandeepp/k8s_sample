@@ -6,10 +6,14 @@ metadata:
     name: simple-webapp-color
 spec:
   containers:
-    - name: simple-webapp-color
-      image: simple-webapp-color
+    - name: nginx
+      image: nginx
       ports:
         - containerPort: 8080
       envFrom:
         - secretRef:
             name: app-secret
+      resources:
+        requests:
+          cpu: 2
+          memory: "4Gi"

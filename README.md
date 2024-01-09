@@ -20,3 +20,8 @@ kubectl get services \
 kubectl get configmaps \
 kubectl get secrets \
 kubectl describe secrets app-secret \
+kubectl create serviceaccount dashboard-sa \
+kubectl get serviceaccount \
+kubectl describe serviceaccount dashboard-sa \
+kubectl exec -it {pod_name} \
+kubectl create token dashboard-sa \
