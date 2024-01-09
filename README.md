@@ -25,3 +25,5 @@ kubectl get serviceaccount \
 kubectl describe serviceaccount dashboard-sa \
 kubectl exec -it {pod_name} \
 kubectl create token dashboard-sa \
+kubectl taint nodes node-name kye=value:NoSchedule \
+kubectl label nodes <node-name> <label-key>=<label-value> \
