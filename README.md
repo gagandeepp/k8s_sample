@@ -29,3 +29,12 @@ kubectl taint nodes node-name kye=value:NoSchedule \
 kubectl label nodes <node-name> <label-key>=<label-value> \
 kubectl logs -f <pod-name> <container-name>\
 kubectl get pods --selector app=App1 \
+kubectl config view \
+kubectl config use-context user-prod@production \
+kubectl proxy \
+kubectl get roles \
+kubectl get rilebindings \
+kubectl describe role developer \
+kubectl describe rolebinding devuser-rolebinding \
+kubectl auth can-i create deployments \
+kube-apiserver -h | grep enable-admission-plugins
